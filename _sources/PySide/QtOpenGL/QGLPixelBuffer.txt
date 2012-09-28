@@ -1,0 +1,304 @@
+.. module:: PySide.QtOpenGL
+.. _QGLPixelBuffer:
+
+QGLPixelBuffer
+**************
+
+.. inheritance-diagram:: QGLPixelBuffer
+    :parts: 2
+
+Synopsis
+--------
+
+Functions
+^^^^^^^^^
+.. container:: function_list
+
+*    def :meth:`bindTexture<PySide.QtOpenGL.QGLPixelBuffer.bindTexture>` (fileName)
+*    def :meth:`bindTexture<PySide.QtOpenGL.QGLPixelBuffer.bindTexture>` (image[, target=0x0DE1])
+*    def :meth:`bindTexture<PySide.QtOpenGL.QGLPixelBuffer.bindTexture>` (pixmap[, target=0x0DE1])
+*    def :meth:`bindToDynamicTexture<PySide.QtOpenGL.QGLPixelBuffer.bindToDynamicTexture>` (texture)
+*    def :meth:`deleteTexture<PySide.QtOpenGL.QGLPixelBuffer.deleteTexture>` (texture_id)
+*    def :meth:`doneCurrent<PySide.QtOpenGL.QGLPixelBuffer.doneCurrent>` ()
+*    def :meth:`drawTexture<PySide.QtOpenGL.QGLPixelBuffer.drawTexture>` (point, textureId[, textureTarget=0x0DE1])
+*    def :meth:`drawTexture<PySide.QtOpenGL.QGLPixelBuffer.drawTexture>` (target, textureId[, textureTarget=0x0DE1])
+*    def :meth:`format<PySide.QtOpenGL.QGLPixelBuffer.format>` ()
+*    def :meth:`generateDynamicTexture<PySide.QtOpenGL.QGLPixelBuffer.generateDynamicTexture>` ()
+*    def :meth:`handle<PySide.QtOpenGL.QGLPixelBuffer.handle>` ()
+*    def :meth:`isValid<PySide.QtOpenGL.QGLPixelBuffer.isValid>` ()
+*    def :meth:`makeCurrent<PySide.QtOpenGL.QGLPixelBuffer.makeCurrent>` ()
+*    def :meth:`releaseFromDynamicTexture<PySide.QtOpenGL.QGLPixelBuffer.releaseFromDynamicTexture>` ()
+*    def :meth:`size<PySide.QtOpenGL.QGLPixelBuffer.size>` ()
+*    def :meth:`toImage<PySide.QtOpenGL.QGLPixelBuffer.toImage>` ()
+*    def :meth:`updateDynamicTexture<PySide.QtOpenGL.QGLPixelBuffer.updateDynamicTexture>` (texture_id)
+
+
+Static functions
+^^^^^^^^^^^^^^^^
+.. container:: function_list
+
+*    def :meth:`hasOpenGLPbuffers<PySide.QtOpenGL.QGLPixelBuffer.hasOpenGLPbuffers>` ()
+
+
+Detailed Description
+--------------------
+
+
+
+    The :class:`PySide.QtOpenGL.QGLPixelBuffer` class encapsulates an OpenGL pbuffer.
+
+    Rendering into a pbuffer is normally done using full hardware acceleration. This can be significantly faster than rendering into a :class:`PySide.QtGui.QPixmap` .
+
+    There are three approaches to using this class:
+
+    Pbuffers are provided by the OpenGL ``pbuffer`` extension; call hasOpenGLPbuffer() to find out if the system provides pbuffers.
+
+    .. seealso::  :ref:`Pbuffers Example<opengl/pbuffers>` 
+
+.. class:: QGLPixelBuffer(size[, format=QGLFormat.defaultFormat()[, shareWidget=None]])
+           QGLPixelBuffer(width, height[, format=QGLFormat.defaultFormat()[, shareWidget=None]])
+
+    :param shareWidget: :class:`PySide.QtOpenGL.QGLWidget`
+    :param width: :class:`PySide.QtCore.int`
+    :param size: :class:`PySide.QtCore.QSize`
+    :param format: :class:`PySide.QtOpenGL.QGLFormat`
+    :param height: :class:`PySide.QtCore.int`
+
+    Constructs an OpenGL pbuffer of the given ``size`` . If no ``format`` is specified, the :meth:`default format<PySide.QtOpenGL.QGLFormat.defaultFormat>` is used. If the ``shareWidget`` parameter points to a valid :class:`PySide.QtOpenGL.QGLWidget` , the pbuffer will share its context with ``shareWidget`` .
+
+    If you intend to bind this pbuffer as a dynamic texture, the width and height components of ``size`` must be powers of two (e.g., 512 x 128).
+
+    .. seealso::  :meth:`PySide.QtOpenGL.QGLPixelBuffer.size`  :meth:`PySide.QtOpenGL.QGLPixelBuffer.format` 
+
+    This is an overloaded function.
+
+    Constructs an OpenGL pbuffer with the ``width`` and ``height`` . If no ``format`` is specified, the :meth:`default format<PySide.QtOpenGL.QGLFormat.defaultFormat>` is used. If the ``shareWidget`` parameter points to a valid :class:`PySide.QtOpenGL.QGLWidget` , the pbuffer will share its context with ``shareWidget`` .
+
+    If you intend to bind this pbuffer as a dynamic texture, the width and height components of ``size`` must be powers of two (e.g., 512 x 128).
+
+    .. seealso::  :meth:`PySide.QtOpenGL.QGLPixelBuffer.size`  :meth:`PySide.QtOpenGL.QGLPixelBuffer.format` 
+
+.. method:: PySide.QtOpenGL.QGLPixelBuffer.bindTexture(fileName)
+
+
+    :param fileName: unicode
+    :rtype: long
+
+
+
+
+    This is an overloaded function.
+
+    Reads the DirectDrawSurface (DDS) compressed file ``fileName`` and generates a 2D GL texture from it.
+
+    Equivalent to calling :meth:`QGLContext.bindTexture()<PySide.QtOpenGL.QGLContext.bindTexture>` .
+
+    .. seealso::  :meth:`PySide.QtOpenGL.QGLPixelBuffer.deleteTexture` 
+
+
+.. method:: PySide.QtOpenGL.QGLPixelBuffer.bindTexture(pixmap[, target=0x0DE1])
+
+
+    :param pixmap: :class:`PySide.QtGui.QPixmap`
+    :param target: long
+    :rtype: long
+
+
+
+
+
+
+
+.. method:: PySide.QtOpenGL.QGLPixelBuffer.bindTexture(image[, target=0x0DE1])
+
+
+    :param image: :class:`PySide.QtGui.QImage`
+    :param target: long
+    :rtype: long
+
+
+
+
+
+
+
+.. method:: PySide.QtOpenGL.QGLPixelBuffer.bindToDynamicTexture(texture)
+
+
+    :param texture: long
+    :rtype: :class:`PySide.QtCore.bool`
+
+
+
+
+
+
+
+.. method:: PySide.QtOpenGL.QGLPixelBuffer.deleteTexture(texture_id)
+
+
+    :param texture_id: long
+
+
+
+
+
+
+
+.. method:: PySide.QtOpenGL.QGLPixelBuffer.doneCurrent()
+
+
+    :rtype: :class:`PySide.QtCore.bool`
+
+
+
+
+    Makes no context the current OpenGL context. Returns true on success; otherwise returns false.
+
+
+
+.. method:: PySide.QtOpenGL.QGLPixelBuffer.drawTexture(point, textureId[, textureTarget=0x0DE1])
+
+
+    :param point: :class:`PySide.QtCore.QPointF`
+    :param textureId: long
+    :param textureTarget: long
+
+
+
+
+
+
+
+.. method:: PySide.QtOpenGL.QGLPixelBuffer.drawTexture(target, textureId[, textureTarget=0x0DE1])
+
+
+    :param target: :class:`PySide.QtCore.QRectF`
+    :param textureId: long
+    :param textureTarget: long
+
+
+
+
+
+
+
+.. method:: PySide.QtOpenGL.QGLPixelBuffer.format()
+
+
+    :rtype: :class:`PySide.QtOpenGL.QGLFormat`
+
+
+
+
+    Returns the format of the pbuffer. The format may be different from the one that was requested.
+
+
+
+.. method:: PySide.QtOpenGL.QGLPixelBuffer.generateDynamicTexture()
+
+
+    :rtype: long
+
+
+
+
+
+
+.. method:: PySide.QtOpenGL.QGLPixelBuffer.handle()
+
+
+    :rtype: :class:`PySide.QtCore.Qt::HANDLE`
+
+
+
+
+    Returns the native pbuffer handle.
+
+
+
+.. staticmethod:: PySide.QtOpenGL.QGLPixelBuffer.hasOpenGLPbuffers()
+
+
+    :rtype: :class:`PySide.QtCore.bool`
+
+
+
+
+    Returns true if the OpenGL ``pbuffer`` extension is present on this system; otherwise returns false.
+
+
+
+.. method:: PySide.QtOpenGL.QGLPixelBuffer.isValid()
+
+
+    :rtype: :class:`PySide.QtCore.bool`
+
+
+
+
+    Returns true if this pbuffer is valid; otherwise returns false.
+
+
+
+.. method:: PySide.QtOpenGL.QGLPixelBuffer.makeCurrent()
+
+
+    :rtype: :class:`PySide.QtCore.bool`
+
+
+
+
+    Makes this pbuffer the current OpenGL rendering context. Returns true on success; otherwise returns false.
+
+    .. seealso::  :meth:`QGLContext.makeCurrent()<PySide.QtOpenGL.QGLContext.makeCurrent>`  :meth:`PySide.QtOpenGL.QGLPixelBuffer.doneCurrent` 
+
+
+.. method:: PySide.QtOpenGL.QGLPixelBuffer.releaseFromDynamicTexture()
+
+
+
+
+
+
+    Releases the pbuffer from any previously bound texture.
+
+    .. seealso::  :meth:`PySide.QtOpenGL.QGLPixelBuffer.bindToDynamicTexture` 
+
+
+.. method:: PySide.QtOpenGL.QGLPixelBuffer.size()
+
+
+    :rtype: :class:`PySide.QtCore.QSize`
+
+
+
+
+    Returns the size of the pbuffer.
+
+
+
+.. method:: PySide.QtOpenGL.QGLPixelBuffer.toImage()
+
+
+    :rtype: :class:`PySide.QtGui.QImage`
+
+
+
+
+    Returns the contents of the pbuffer as a :class:`PySide.QtGui.QImage` .
+
+
+
+.. method:: PySide.QtOpenGL.QGLPixelBuffer.updateDynamicTexture(texture_id)
+
+
+    :param texture_id: long
+
+
+
+
+
+
+
+

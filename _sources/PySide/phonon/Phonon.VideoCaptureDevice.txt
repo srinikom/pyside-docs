@@ -1,0 +1,145 @@
+.. module:: PySide.phonon
+.. _Phonon.VideoCaptureDevice:
+
+Phonon.VideoCaptureDevice
+*************************
+
+.. inheritance-diagram:: Phonon.VideoCaptureDevice
+    :parts: 2
+
+Synopsis
+--------
+
+Functions
+^^^^^^^^^
+.. container:: function_list
+
+*    def :meth:`__eq__<PySide.phonon.Phonon.VideoCaptureDevice.__eq__>` (otherDescription)
+*    def :meth:`__ne__<PySide.phonon.Phonon.VideoCaptureDevice.__ne__>` (otherDescription)
+*    def :meth:`description<PySide.phonon.Phonon.VideoCaptureDevice.description>` ()
+*    def :meth:`index<PySide.phonon.Phonon.VideoCaptureDevice.index>` ()
+*    def :meth:`isValid<PySide.phonon.Phonon.VideoCaptureDevice.isValid>` ()
+*    def :meth:`name<PySide.phonon.Phonon.VideoCaptureDevice.name>` ()
+*    def :meth:`property<PySide.phonon.Phonon.VideoCaptureDevice.property>` (name)
+*    def :meth:`propertyNames<PySide.phonon.Phonon.VideoCaptureDevice.propertyNames>` ()
+
+
+Static functions
+^^^^^^^^^^^^^^^^
+.. container:: function_list
+
+*    def :meth:`fromIndex<PySide.phonon.Phonon.VideoCaptureDevice.fromIndex>` (index)
+
+
+Detailed Description
+--------------------
+
+
+
+
+.. class:: PySide.phonon.Phonon.VideoCaptureDevice()
+           PySide.phonon.Phonon.VideoCaptureDevice(VideoCaptureDevice)
+           PySide.phonon.Phonon.VideoCaptureDevice(index, properties)
+
+    :param VideoCaptureDevice: :class:`PySide.phonon.Phonon::VideoCaptureDevice`
+    :param index: :class:`PySide.QtCore.int`
+    :param properties: 
+
+
+
+
+.. method:: PySide.phonon.Phonon.VideoCaptureDevice.description()
+
+
+    :rtype: unicode
+
+
+
+
+
+
+.. staticmethod:: PySide.phonon.Phonon.VideoCaptureDevice.fromIndex(index)
+
+
+    :param index: :class:`PySide.QtCore.int`
+    :rtype: VideoCaptureDevice
+
+
+
+
+
+
+.. method:: PySide.phonon.Phonon.VideoCaptureDevice.index()
+
+
+    :rtype: :class:`PySide.QtCore.int`
+
+
+
+
+
+
+.. method:: PySide.phonon.Phonon.VideoCaptureDevice.isValid()
+
+
+    :rtype: :class:`PySide.QtCore.bool`
+
+
+
+
+
+
+.. method:: PySide.phonon.Phonon.VideoCaptureDevice.name()
+
+
+    :rtype: unicode
+
+
+
+
+
+
+.. method:: PySide.phonon.Phonon.VideoCaptureDevice.__ne__(otherDescription)
+
+
+    :param otherDescription: :class:`PySide.phonon.Phonon::ObjectDescription`
+    :rtype: :class:`PySide.QtCore.bool`
+
+
+
+
+
+
+.. method:: PySide.phonon.Phonon.VideoCaptureDevice.__eq__(otherDescription)
+
+
+    :param otherDescription: :class:`PySide.phonon.Phonon::ObjectDescription`
+    :rtype: :class:`PySide.QtCore.bool`
+
+
+
+
+
+
+.. method:: PySide.phonon.Phonon.VideoCaptureDevice.property(name)
+
+
+    :param name: str
+    :rtype: object
+
+
+
+
+
+
+.. method:: PySide.phonon.Phonon.VideoCaptureDevice.propertyNames()
+
+
+    :rtype: 
+
+
+
+
+
+
+
