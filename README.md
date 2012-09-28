@@ -1,4 +1,5 @@
 pyside-docs
 ===========
+Temporary docs for PySide until website is up.
 
-pyside-docs
+[Sep 27 2012]
